@@ -1,0 +1,180 @@
+/* Cart Notification */
+.cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--rose-gold);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Before/After Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container .before,
+.slider-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-container .before {
+    width: var(--slider-value, 50%);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slider-container .before img,
+.slider-container .after img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-container .label {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.slider-container .before .label {
+    left: 20px;
+}
+
+.slider-container .after .label {
+    right: 20px;
+}
+
+.slider-container input[type="range"] {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    width: calc(100% + 40px);
+    height: 100%;
+    background: transparent;
+    left: -20px;
+    top: 0;
+    z-index: 3;
+    outline: none;
+    margin: 0;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--rose-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background-color: var(--rose-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+}
+
+/* Hover Effects */
+.btn, .product-card, .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Reduced for footer button */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    transform: translateY(20px); /* Reduced to minimize space */
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Gallery Hover Effects (for Gallery page) */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(183, 110, 121, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay-content {
+    color: white;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay-content {
+    transform: translateY(0);
+}

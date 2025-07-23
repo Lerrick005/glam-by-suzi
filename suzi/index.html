@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam-by Suzii | Premium Beauty & Makeup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Glam-by Suzii Logo" class="logo-image">
+                <span class="logo-text">Glam-by Suzii</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="services.html">Services</a>
+                <a href="tutorials.html">Tutorials</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" class="cart-icon">🛒 <span class="cart-count">0</span></a>
+            </div>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero">
+        <video autoplay muted loop id="bgVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Glow Up with Confidence</h1>
+            <p class="subtitle">Discover Your True Beauty with Glam-by Suzii</p>
+            <div class="cta-buttons">
+                <a href="shop.html" class="btn glow-btn">Shop Now</a>
+                <a href="services.html" class="btn glow-btn">Book Session</a>
+                <a href="tutorials.html" class="btn glow-btn">Watch Tutorials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Our Bestsellers</h2>
+            <div class="product-grid">
+                <!-- Product cards will be loaded via JavaScript -->
+            </div>
+            <a href="shop.html" class="btn view-all">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Transformative Beauty Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3>Bridal Makeup</h3>
+                    <p>Flawless looks for your special day</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3>Glam Tutorials</h3>
+                    <p>Learn professional techniques</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Skin Prep</h3>
+                    <p>Perfect canvas for makeup</p>
+                </div>
+            </div>
+            <a href="services.html" class="btn glow-btn">Book Your Session</a>
+        </div>
+    </section>
+
+    <!-- Tutorial Preview Section -->
+    <section class="tutorial-preview" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Mini Tutorials</h2>
+            <div class="before-after-slider">
+                <!-- Slider will be initialized via JavaScript -->
+            </div>
+            <a href="tutorials.html" class="btn view-all">View Full Tutorials</a>
+        </div>
+    </section>
+
+    <!-- Testimonial Preview -->
+    <section class="testimonial-preview" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Client Love</h2>
+            <div class="testimonial-card">
+                <p>"Suzii transformed my look completely! The makeup lasted all day and I felt absolutely stunning."</p>
+                <div class="client-info">
+                    <span class="client-name">- Jessica T.</span>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <a href="testimonials.html" class="btn view-all">Read More Reviews</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo" aria-label="Glam-by Suzii Home"></a>
+                    <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
+                    <h3>Glam-by Suzii</h3>
+                    <p>Helping you discover and enhance your natural beauty through premium products and personalized services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <div class="social-icons">
+                        
+                    </div>
+                    <p>Subscribe to our newsletter for exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Glam-by Suzii. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="main.js"></script>
+    <script src="slider.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>

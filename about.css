@@ -1,0 +1,257 @@
+/* About Hero Section */
+.about-hero {
+    background-color: var(--blush-pink);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--jet-black);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--rose-gold);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Story Section */
+.story-section {
+    padding: 60px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.story-content {
+    padding: 20px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    background-color: var(--pearl-white);
+    padding: 60px 0;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.philosophy-card {
+    background-color: var(--soft-pink);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.philosophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(183, 110, 121, 0.2);
+}
+
+.philosophy-icon {
+    font-size: 2.5rem;
+    color: var(--rose-gold);
+    margin-bottom: 15px;
+}
+
+.philosophy-card h3 {
+    margin-bottom: 10px;
+    color: var(--jet-black);
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background-color: var(--pearl-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h3 {
+    margin-bottom: 5px;
+    color: var(--rose-gold);
+}
+
+.position {
+    font-size: 0.9rem;
+    color: var(--mocha-brown);
+    margin-bottom: 10px;
+}
+
+.bio {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    color: var(--jet-black);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--rose-gold);
+    transform: translateY(-3px);
+}
+
+/* Social Media Section */
+.social-media-section {
+    background-color: var(--blush-pink);
+    padding: 60px 0;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.social-card {
+    background-color: var(--pearl-white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-card .social-icon {
+    font-size: 2rem;
+    color: var(--rose-gold);
+    margin-bottom: 10px;
+}
+
+.social-card h3 {
+    margin-bottom: 5px;
+    color: var(--jet-black);
+}
+
+.social-card p {
+    font-size: 0.9rem;
+    color: var(--mocha-brown);
+    margin-bottom: 10px;
+}
+
+.follow-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--rose-gold);
+    color: var(--pearl-white);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.follow-btn:hover {
+    background-color: var(--blush-pink);
+    color: var(--rose-gold);
+}
+
+/* Press Section */
+.press-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.press-logos img {
+    max-height: 50px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: var(--transition);
+}
+
+.press-logos img:hover {
+    filter: grayscale(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .philosophy-grid,
+    .team-grid,
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .press-logos img {
+        max-height: 40px;
+    }
+}

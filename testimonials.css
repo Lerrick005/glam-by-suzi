@@ -1,0 +1,176 @@
+/* Testimonials Hero Section */
+.testimonials-hero {
+    background-color: var(--blush-pink);
+    padding: 100px 0 60px;
+    text-align: center;
+    background: url('gallery.jpg') center/cover no-repeat;
+}
+
+.testimonials-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--jet-black);
+    margin-bottom: 20px;
+}
+
+.testimonials-hero .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: var(--jet-black);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Testimonials Carousel Section */
+.testimonials-carousel {
+    padding: 60px 0;
+    background-color: var(--pearl-white);
+}
+
+.swiper {
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    background: var(--pearl-white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--rose-gold);
+}
+
+.testimonial-card .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--jet-black);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-card .author {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--rose-gold);
+    margin-bottom: 5px;
+}
+
+.testimonial-card .role {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--mocha-brown);
+    opacity: 0.7;
+}
+
+.star-rating {
+    color: var(--gold-accent);
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.star-rating i {
+    margin-right: 2px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--blush-pink);
+}
+
+.cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--jet-black);
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--jet-black);
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: var(--rose-gold);
+    color: var(--pearl-white);
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--pearl-white);
+    color: var(--rose-gold);
+}
+
+/* Swiper Navigation */
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--rose-gold);
+}
+
+.swiper-pagination-bullet {
+    background: var(--blush-pink);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--rose-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .testimonials-hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .testimonial-card {
+        margin: 10px;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-hero h1 {
+        font-size: 2rem;
+    }
+
+    .testimonials-hero .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-card .quote {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+}
