@@ -1,21 +1,40 @@
 /* About Hero Section */
 .about-hero {
-    background-color: var(--blush-pink);
+    background-color: var(--bg-light);
     padding: 80px 0;
     text-align: center;
-    color: var(--jet-black);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .about-hero {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
 .about-hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--rose-gold);
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+body.dark-mode .about-hero h1 {
+    color: var(--primary-color);
 }
 
 .about-hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+body.dark-mode .about-hero p {
+    color: var(--text-lighter);
 }
 
 /* Story Section */
@@ -38,13 +57,23 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+body.dark-mode .story-image img {
+    box-shadow: var(--shadow);
 }
 
 /* Philosophy Section */
 .philosophy-section {
-    background-color: var(--pearl-white);
+    background-color: var(--bg-color);
     padding: 60px 0;
+    transition: var(--transition);
+}
+
+body.dark-mode .philosophy-section {
+    background-color: var(--bg-light);
 }
 
 .philosophy-grid {
@@ -54,27 +83,39 @@
 }
 
 .philosophy-card {
-    background-color: var(--soft-pink);
+    background-color: var(--bg-light);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     transition: var(--transition);
 }
 
+body.dark-mode .philosophy-card {
+    background-color: var(--bg-dark);
+}
+
 .philosophy-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(183, 110, 121, 0.2);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .philosophy-icon {
     font-size: 2.5rem;
-    color: var(--rose-gold);
+    color: var(--primary-color);
     margin-bottom: 15px;
+    transition: var(--transition);
 }
 
 .philosophy-card h3 {
     margin-bottom: 10px;
-    color: var(--jet-black);
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+body.dark-mode .philosophy-card h3 {
+    color: var(--text-light);
 }
 
 /* Team Section */
@@ -89,15 +130,20 @@
 }
 
 .team-card {
-    background-color: var(--pearl-white);
+    background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
+body.dark-mode .team-card {
+    background-color: var(--bg-dark);
+}
+
 .team-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .team-image img {
@@ -113,18 +159,36 @@
 
 .team-info h3 {
     margin-bottom: 5px;
-    color: var(--rose-gold);
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+body.dark-mode .team-info h3 {
+    color: var(--primary-color);
 }
 
 .position {
     font-size: 0.9rem;
-    color: var(--mocha-brown);
+    color: var(--text-light);
     margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+body.dark-mode .position {
+    color: var(--text-lighter);
 }
 
 .bio {
     font-size: 0.9rem;
     margin-bottom: 15px;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+body.dark-mode .bio {
+    color: var(--text-lighter);
 }
 
 .social-links {
@@ -135,19 +199,28 @@
 
 .social-links a {
     font-size: 1.2rem;
-    color: var(--jet-black);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
+body.dark-mode .social-links a {
+    color: var(--text-light);
+}
+
 .social-links a:hover {
-    color: var(--rose-gold);
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
 /* Social Media Section */
 .social-media-section {
-    background-color: var(--blush-pink);
+    background-color: var(--bg-light);
     padding: 60px 0;
+    transition: var(--transition);
+}
+
+body.dark-mode .social-media-section {
+    background-color: var(--bg-dark);
 }
 
 .social-grid {
@@ -157,48 +230,73 @@
 }
 
 .social-card {
-    background-color: var(--pearl-white);
+    background-color: var(--bg-color);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     transition: var(--transition);
 }
 
+body.dark-mode .social-card {
+    background-color: var(--bg-dark);
+}
+
 .social-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .social-card .social-icon {
     font-size: 2rem;
-    color: var(--rose-gold);
+    color: var(--primary-color);
     margin-bottom: 10px;
+    transition: var(--transition);
 }
 
 .social-card h3 {
     margin-bottom: 5px;
-    color: var(--jet-black);
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+body.dark-mode .social-card h3 {
+    color: var(--text-light);
 }
 
 .social-card p {
     font-size: 0.9rem;
-    color: var(--mocha-brown);
+    color: var(--text-light);
     margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+body.dark-mode .social-card p {
+    color: var(--text-lighter);
 }
 
 .follow-btn {
     display: inline-block;
     padding: 8px 15px;
-    background-color: var(--rose-gold);
-    color: var(--pearl-white);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     border-radius: 20px;
     font-size: 0.8rem;
     transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .follow-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .follow-btn:hover {
-    background-color: var(--blush-pink);
-    color: var(--rose-gold);
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 /* Press Section */
@@ -225,6 +323,60 @@
     filter: grayscale(0);
 }
 
+/* Floating Action Buttons for WhatsApp and Phone */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.fab.whatsapp {
+    background-color: var(--fab-whatsapp-bg);
+    color: var(--bg-color);
+}
+
+.fab.whatsapp:hover {
+    background-color: #20b158;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+body.dark-mode .fab.whatsapp:hover {
+    background-color: #0a6b5a;
+}
+
+.fab.phone {
+    background-color: var(--fab-phone-bg);
+    color: var(--bg-color);
+}
+
+.fab.phone:hover {
+    background-color: #005b8a;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+body.dark-mode .fab.phone:hover {
+    background-color: #003f66;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-hero h1 {
@@ -237,6 +389,17 @@
 
     .social-links {
         gap: 10px;
+    }
+
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 
@@ -253,5 +416,16 @@
 
     .press-logos img {
         max-height: 40px;
+    }
+
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fab {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

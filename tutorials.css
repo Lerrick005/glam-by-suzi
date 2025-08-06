@@ -1,29 +1,50 @@
-/* Tutorials Page Styles */
+/* Tutorials Hero Section */
 .tutorials-hero {
-    background: linear-gradient(rgba(186, 163, 166, 0.7), rgba(183, 110, 121, 0.7)), 
-                url('tutorials.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('tutorials.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--bg-color);
     text-align: center;
     padding: 150px 0 100px;
+}
+
+body.dark-mode .tutorials-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('tutorials.jpg');
 }
 
 .tutorials-hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .tutorials-hero h1 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .tutorials-hero p {
     font-size: 1.3rem;
     max-width: 700px;
     margin: 0 auto;
+    color: var(--text-lighter);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .tutorials-hero p {
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 /* Tutorial Categories */
 .tutorial-categories {
     padding: 40px 0;
-    background: var(--soft-pink);
+    background: var(--bg-light);
+}
+
+body.dark-mode .tutorial-categories {
+    background: var(--bg-dark);
 }
 
 .category-tabs {
@@ -36,18 +57,25 @@
 .category-tabs .tab-btn {
     padding: 10px 20px;
     background: transparent;
-    border: 2px solid var(--rose-gold);
-    color: var(--rose-gold);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
     border-radius: 30px;
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .category-tabs .tab-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .category-tabs .tab-btn:hover, 
 .category-tabs .tab-btn.active {
-    background: var(--rose-gold);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 /* Tutorial Grid */
@@ -62,16 +90,20 @@
 }
 
 .tutorial-card {
-    background: white;
+    background: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+body.dark-mode .tutorial-card {
+    background: var(--bg-dark);
 }
 
 .tutorial-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .tutorial-media {
@@ -91,8 +123,8 @@
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    background: rgba(183, 110, 121, 0.8);
-    color: white;
+    background: rgba(56, 176, 0, 0.8); /* Matches --primary-color in light mode */
+    color: var(--bg-color);
     border: none;
     border-radius: 50%;
     font-size: 24px;
@@ -104,8 +136,12 @@
     z-index: 2;
 }
 
+body.dark-mode .play-btn {
+    background: rgba(76, 201, 240, 0.8); /* Matches --primary-color in dark mode */
+}
+
 .play-btn:hover {
-    background: var(--rose-gold);
+    background: var(--primary-color);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -116,29 +152,56 @@
 .tutorial-info h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--rose-gold);
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+body.dark-mode .tutorial-info h3 {
+    color: var(--primary-color);
 }
 
 .tutorial-info .duration {
-    color: #666;
+    color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: 15px;
+}
+
+body.dark-mode .tutorial-info .duration {
+    color: var(--text-lighter);
 }
 
 .tutorial-info .description {
     margin-bottom: 20px;
     line-height: 1.6;
+    color: var(--text-light);
+}
+
+body.dark-mode .tutorial-info .description {
+    color: var(--text-lighter);
 }
 
 .watch-btn {
     width: 100%;
-    background: var(--rose-gold);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
     border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .watch-btn {
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .watch-btn:hover {
-    background: var(--jet-black);
+    background: var(--bg-light);
+    color: var(--primary-color);
 }
 
 /* Video Modal */
@@ -163,13 +226,22 @@
     animation: modalFadeIn 0.3s ease;
 }
 
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .close-modal {
     position: absolute;
     top: -40px;
     right: 0;
     font-size: 30px;
-    color: white;
+    color: var(--bg-color);
     cursor: pointer;
+}
+
+body.dark-mode .close-modal {
+    color: var(--text-light);
 }
 
 .video-container {
@@ -187,12 +259,66 @@
     height: 100%;
 }
 
+/* Floating Action Buttons for WhatsApp and Phone */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.whatsapp {
+    background-color: #25d366; /* WhatsApp green */
+    color: var(--bg-color);
+}
+
+body.dark-mode .whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #20b158;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.phone {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+body.dark-mode .phone {
+    background-color: var(--secondary-color);
+}
+
+.phone:hover {
+    background-color: #005b8a;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .tutorials-hero h1 {
         font-size: 3rem;
     }
-    
+
     .tutorial-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
@@ -202,13 +328,45 @@
     .tutorials-hero {
         padding: 120px 0 80px;
     }
-    
+
     .video-modal .modal-content {
         width: 95%;
     }
-    
+
     .close-modal {
         top: -30px;
         right: 10px;
+    }
+
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tutorials-hero h1 {
+        font-size: 2rem;
+    }
+
+    .tutorials-hero p {
+        font-size: 1rem;
+    }
+
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fab {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

@@ -1,18 +1,27 @@
-/* Contact Page Styles for Glam-by Suzi */
+/* Contact Hero Section */
 .contact-hero {
-    background: linear-gradient(rgba(183, 110, 121, 0.7), rgba(183, 110, 121, 0.7)), 
-                url('services.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('services.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--bg-color);
     text-align: center;
     padding: 150px 0 100px;
+}
+
+body.dark-mode .contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('services.jpg');
 }
 
 .contact-hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .contact-hero h1 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .contact-hero p {
@@ -20,6 +29,13 @@
     max-width: 700px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-lighter);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .contact-hero p {
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 /* Contact Content */
@@ -37,8 +53,14 @@
 .contact-info-section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: var(--rose-gold, #b76e79);
+    color: var(--primary-color);
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+body.dark-mode .contact-form-section h2,
+body.dark-mode .contact-info-section h2 {
+    color: var(--primary-color);
 }
 
 .form-group {
@@ -50,6 +72,11 @@
     margin-bottom: 8px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+body.dark-mode .form-group label {
+    color: var(--text-light);
 }
 
 .form-group input,
@@ -57,16 +84,26 @@
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    transition: var(--transition, all 0.3s ease);
+    background: var(--bg-light);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border-color: var(--border-color);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: var(--rose-gold, #b76e79);
+    border-color: var(--primary-color);
     outline: none;
 }
 
@@ -78,18 +115,27 @@
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: var(--rose-gold, #b76e79);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .submit-btn {
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .submit-btn:hover {
-    background: var(--jet-black, #1a1a1a);
+    background: var(--bg-light);
+    color: var(--primary-color);
 }
 
 /* Contact Info */
@@ -101,40 +147,22 @@
 .contact-icon {
     font-size: 2rem;
     margin-right: 20px;
-    color: var(--rose-gold, #b76e79);
+    color: var(--primary-color);
+}
+
+body.dark-mode .contact-icon {
+    color: var(--primary-color);
 }
 
 .contact-details h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
 }
 
-.whatsapp-btn,
-.directions-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    color: white;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-family: 'Montserrat', sans-serif;
-    transition: var(--transition, all 0.3s ease);
-    text-decoration: none;
-}
-
-.whatsapp-btn {
-    background: #25D366;
-}
-
-.directions-btn {
-    background: #4285F4;
-}
-
-.whatsapp-btn:hover,
-.directions-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+body.dark-mode .contact-details h3 {
+    color: var(--text-light);
 }
 
 .social-links {
@@ -145,6 +173,11 @@
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+body.dark-mode .social-links h3 {
+    color: var(--text-light);
 }
 
 .social-icons {
@@ -154,13 +187,17 @@
 
 .social-icon {
     font-size: 1.5rem;
-    color: var(--jet-black, #1a1a1a);
-    transition: var(--transition, all 0.3s ease);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .social-icon {
+    color: var(--text-light);
 }
 
 .social-icon:hover {
     transform: translateY(-5px);
-    color: var(--rose-gold, #b76e79);
+    color: var(--primary-color);
 }
 
 /* Map Section */
@@ -171,7 +208,11 @@
 .map-container {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+}
+
+body.dark-mode .map-container {
+    box-shadow: var(--shadow);
 }
 
 /* Toast Notification */
@@ -179,16 +220,22 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
     z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     animation: fadeInOut 4s ease forwards;
     max-width: 300px;
     text-align: center;
+}
+
+body.dark-mode .toast {
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 @keyframes fadeInOut {
@@ -198,16 +245,70 @@
     100% { opacity: 0; transform: translateY(20px); }
 }
 
+/* Floating Action Buttons for WhatsApp and Phone */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.whatsapp {
+    background-color: #25d366; /* WhatsApp green */
+    color: var(--bg-color);
+}
+
+body.dark-mode .whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #20b158;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.phone {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+body.dark-mode .phone {
+    background-color: var(--secondary-color);
+}
+
+.phone:hover {
+    background-color: #005b8a;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .contact-hero h1 {
         font-size: 3rem;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info-section {
         margin-top: 50px;
     }
@@ -217,10 +318,42 @@
     .contact-hero {
         padding: 120px 0 80px;
     }
-    
+
     .toast {
         bottom: 20px;
         right: 20px;
         max-width: 80%;
+    }
+
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fab {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

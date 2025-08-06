@@ -11,31 +11,31 @@
  */
 const PRODUCTS = [
     // Lips (6)
-    { id: 1, name: "Red Lipstick", price: 15.00, category: "lips", description: "Long-lasting red lipstick for vibrant color.", images: ["red-lipstick.jpg"] },
-    { id: 2, name: "Pink Lip Gloss", price: 12.00, category: "lips", description: "Shiny pink gloss with a non-sticky formula.", images: ["pink-lip-gloss.jpg"] },
-    { id: 3, name: "Nude Lipstick", price: 15.00, category: "lips", description: "Natural nude shade for everyday wear.", images: ["nude-lipstick.jpg"] },
-    { id: 4, name: "Berry Lipstick", price: 15.00, category: "lips", description: "Rich berry color for a bold look.", images: ["berry-lipstick.jpg"] },
-    { id: 5, name: "Matte Coral Lipstick", price: 18.00, category: "lips", description: "Vibrant matte coral for a modern finish.", images: ["matte-coral-lipstick.jpg"] },
-    { id: 6, name: "Lip Liner", price: 10.00, category: "lips", description: "Precision lip liner for defined lips.", images: ["lip-liner.jpg"] },
+    { id: 1, name: "Red Lipstick", price: 15.00, category: "lips", description: "Long-lasting red lipstick for vibrant color.", images: ["red lipstick.jpg"] },
+    { id: 2, name: "Pink Lip Gloss", price: 12.00, category: "lips", description: "Shiny pink gloss with a non-sticky formula.", images: ["pink lip gloss.jpg"] },
+    { id: 3, name: "Nude Lipstick", price: 15.00, category: "lips", description: "Natural nude shade for everyday wear.", images: ["nude lipstick.jpg"] },
+    { id: 4, name: "Berry Lipstick", price: 15.00, category: "lips", description: "Rich berry color for a bold look.", images: ["berry lipstick.jpg"] },
+    { id: 5, name: "Matte Coral Lipstick", price: 18.00, category: "lips", description: "Vibrant matte coral for a modern finish.", images: ["matte.jpg"] },
+    { id: 6, name: "Lip Liner", price: 10.00, category: "lips", description: "Precision lip liner for defined lips.", images: ["lip liner.jpg"] },
     // Eyes (6)
-    { id: 7, name: "Eyeshadow Palette", price: 25.00, category: "eyes", description: "12-shade palette for versatile looks.", images: ["eyeshadow-palette.png"] },
-    { id: 8, name: "Volumizing Mascara", price: 12.00, category: "eyes", description: "Lengthening and volumizing mascara.", images: ["volumizing-mascara.jpg"] },
-    { id: 9, name: "Liquid Eyeliner", price: 10.00, category: "eyes", description: "Waterproof liquid liner for precise lines.", images: ["liquid-eyeliner.jpg"] },
-    { id: 10, name: "Eyebrow Gel", price: 8.00, category: "eyes", description: "Tinted brow gel for shaping.", images: ["eyebrow-gel.jpg"] },
-    { id: 11, name: "Glitter Eyeshadow", price: 14.00, category: "eyes", description: "Sparkling eyeshadow for glamour.", images: ["glitter-eyeshadow.jpg"] },
-    { id: 12, name: "False Eyelashes", price: 10.00, category: "eyes", description: "Reusable lashes for dramatic effect.", images: ["false-eyelashes.jpg"] },
+    { id: 7, name: "Eyeshadow Palette", price: 25.00, category: "eyes", description: "12-shade palette for versatile looks.", images: ["eyeshadow pallete.png"] },
+    { id: 8, name: "Volumizing Mascara", price: 12.00, category: "eyes", description: "Lengthening and volumizing mascara.", images: ["volume mascara.jpg"] },
+    { id: 9, name: "Liquid Eyeliner", price: 10.00, category: "eyes", description: "Waterproof liquid liner for precise lines.", images: ["liquid eye liner.jpg"] },
+    { id: 10, name: "Eyebrow Gel", price: 8.00, category: "eyes", description: "Tinted brow gel for shaping.", images: ["eyebrow gel.jpg"] },
+    { id: 11, name: "Glitter Eyeshadow", price: 14.00, category: "eyes", description: "Sparkling eyeshadow for glamour.", images: ["glitter eyeshadow.jpg"] },
+    { id: 12, name: "False Eyelashes", price: 10.00, category: "eyes", description: "Reusable lashes for dramatic effect.", images: ["false eyelashes.jpg"] },
     // Face (5)
-    { id: 13, name: "Liquid Foundation", price: 20.00, category: "face", description: "Buildable coverage foundation.", images: ["images/products/foundation.jpg"] },
-    { id: 14, name: "Concealer", price: 12.00, category: "face", description: "Full coverage concealer for flawless skin.", images: ["images/products/concealer.jpg"] },
-    { id: 15, name: "Powder Blush", price: 10.00, category: "face", description: "Silky powder blush for a natural flush.", images: ["images/products/blush.jpg"] },
-    { id: 16, name: "Highlighter", price: 15.00, category: "face", description: "Dewy highlighter for radiant glow.", images: ["images/products/highlighter.jpg"] },
-    { id: 17, name: "Contour Palette", price: 18.00, category: "face", description: "Cream contour palette for sculpting.", images: ["images/products/contour.jpg"] },
+    { id: 13, name: "Liquid Foundation", price: 20.00, category: "face", description: "Buildable coverage foundation.", images: ["foundation.png"] },
+    { id: 14, name: "Concealer", price: 12.00, category: "face", description: "Full coverage concealer for flawless skin.", images: ["concealer.jpg"] },
+    { id: 15, name: "Powder Blush", price: 10.00, category: "face", description: "Silky powder blush for a natural flush.", images: ["blush.jpg"] },
+    { id: 16, name: "Highlighter", price: 15.00, category: "face", description: "Dewy highlighter for radiant glow.", images: ["highlighter.jpg"] },
+    { id: 17, name: "Contour Palette", price: 18.00, category: "face", description: "Cream contour palette for sculpting.", images: ["contour.jpg"] },
     // Tools (5)
-    { id: 18, name: "Makeup Brush Set", price: 30.00, category: "tools", description: "10-piece professional brush set.", images: ["images/products/brush-set.jpg"] },
-    { id: 19, name: "Beauty Sponge", price: 8.00, category: "tools", description: "Soft sponge for seamless blending.", images: ["images/products/sponge.jpg"] },
-    { id: 20, name: "Eyelash Curler", price: 6.00, category: "tools", description: "Precision tool for curled lashes.", images: ["images/products/curler.jpg"] },
-    { id: 21, name: "Blending Brush", price: 10.00, category: "tools", description: "Soft brush for blending makeup.", images: ["images/products/blending-brush.jpg"] },
-    { id: 22, name: "Powder Brush", price: 12.00, category: "tools", description: "Large brush for powder application.", images: ["images/products/powder-brush.jpg"] }
+    { id: 18, name: "Makeup Brush Set", price: 30.00, category: "tools", description: "10-piece professional brush set.", images: ["brush-set.jpg"] },
+    { id: 19, name: "Beauty Sponge", price: 8.00, category: "tools", description: "Soft sponge for seamless blending.", images: ["sponge.jpg"] },
+    { id: 20, name: "Eyelash Curler", price: 6.00, category: "tools", description: "Precision tool for curled lashes.", images: ["curler.jpg"] },
+    { id: 21, name: "Blending Brush", price: 10.00, category: "tools", description: "Soft brush for blending makeup.", images: ["blending-brush.jpg"] },
+    { id: 22, name: "Powder Brush", price: 12.00, category: "tools", description: "Large brush for powder application.", images: ["powder-brush.jpg"] }
 ];
 
 // ============================================================================
@@ -132,8 +132,7 @@ function initializeProductCards() {
  */
 function filterProducts(category = 'lips') {
     console.log('Filtering products for category:', category);
-    const productCards = document.query reconstruir
-querySelectorAll('.product-card');
+    const productCards = document.querySelectorAll('.product-card');
     let visibleCount = 0;
     productCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
@@ -397,4 +396,4 @@ function initShop() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', initShop);n
+document.addEventListener('DOMContentLoaded', initShop);

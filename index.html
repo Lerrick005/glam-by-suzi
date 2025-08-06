@@ -28,6 +28,7 @@
                 <a href="testimonials.html">Testimonials</a>
                 <a href="contact.html">Contact</a>
                 <a href="#" class="cart-icon">🛒 <span class="cart-count">0</span></a>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
             </div>
             <div class="mobile-menu-btn">☰</div>
         </div>
@@ -117,8 +118,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="index.html" class="logo" aria-label="Glam-by Suzii Home"></a>
-                    <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
+                    <a href="index.html" class="logo" aria-label="Glam-by Suzii Home">
+                        <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
+                    </a>
                     <h3>Glam-by Suzii</h3>
                     <p>Helping you discover and enhance your natural beauty through premium products and personalized services.</p>
                 </div>
@@ -132,12 +134,12 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Connect With Us</h3><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
                         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <div class="social-icons">
-                        
                     </div>
                     <p>Subscribe to our newsletter for exclusive offers</p>
                     <form class="newsletter-form">
@@ -151,6 +153,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="https://wa.me/254111240296" class="fab whatsapp" target="_blank" aria-label="Contact via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254740579741" class="fab phone" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>

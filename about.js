@@ -1,4 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Update --header-height dynamically
+    function updateHeaderHeight() {
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            const height = navbar.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', `${height}px`);
+        }
+    }
+
+    // Initial update and listen for resize/scroll
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    window.addEventListener('scroll', updateHeaderHeight);
+
+    // Check for saved theme in localStorage and apply it
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.setAttribute('data-theme', savedTheme);
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            const icon = darkModeToggle.querySelector('i');
+            if (savedTheme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                darkModeToggle.setAttribute('aria-label', 'Toggle light mode');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                darkModeToggle.setAttribute('aria-label', 'Toggle dark mode');
+            }
+        }
+    }
+
+    // Dark Mode Toggle Functionality
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                this.querySelector('i').classList.remove('fa-sun');
+                this.querySelector('i').classList.add('fa-moon');
+                this.setAttribute('aria-label', 'Toggle dark mode');
+                console.log('Light mode enabled');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                this.querySelector('i').classList.remove('fa-moon');
+                this.querySelector('i').classList.add('fa-sun');
+                this.setAttribute('aria-label', 'Toggle light mode');
+                console.log('Dark mode enabled');
+            }
+        });
+    }
+
+    // Floating Action Button Click Tracking (WhatsApp and Call)
+    const fabButtons = document.querySelectorAll('.fab');
+    fabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const platform = this.classList.contains('whatsapp') ? 'whatsapp' : 'phone';
+            console.log(`FAB clicked: ${platform}`);
+            // Links should work automatically via href (WhatsApp or tel:)
+        });
+    });
+
     // Team member modal functionality
     const teamCards = document.querySelectorAll('.team-card');
     const teamModal = document.createElement('div');
@@ -85,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const icon = this.querySelector('.philosophy-icon');
             icon.style.transform = 'rotate(0) scale(1)';
             icon.style.color = 'var(--rose-gold)';
-            this.style.backgroundColor = '#fff';
+            this.style.backgroundColor = 'var(--bg-color)';
             this.style.color = 'inherit';
         });
     });
@@ -100,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const count = +counter.innerText;
             const increment = target / speed;
             
-            if(count < target) {
+            if (count < target) {
                 counter.innerText = Math.ceil(count + increment);
                 setTimeout(animateCounters, 1);
             } else {
@@ -112,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize counters when section is in view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) {
+            if (entry.isIntersecting) {
                 animateCounters();
                 observer.unobserve(entry.target);
             }
@@ -120,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.5 });
 
     const counterSection = document.querySelector('.social-media-section');
-    if(counterSection) {
+    if (counterSection) {
         observer.observe(counterSection);
     }
 
@@ -128,7 +194,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.social-card').forEach(card => {
         card.addEventListener('click', function() {
             const platform = this.classList[1]; // Gets the platform class (instagram, youtube, etc.)
-            // In a real app, you might send this to analytics
             console.log(`Social link clicked: ${platform}`);
         });
     });

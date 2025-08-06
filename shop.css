@@ -1,23 +1,40 @@
-/* Shop Page Styles */
+/* Shop Hero Section */
 .shop-hero {
-    background: linear-gradient(rgba(183, 110, 121, 0.8), rgba(183, 110, 121, 0.8)), 
-                url('shop.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('shop.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--bg-color);
     padding: 120px 0 80px;
     text-align: center;
+}
+
+body.dark-mode .shop-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('shop.jpg');
 }
 
 .shop-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .shop-hero h1 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .shop-hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
+    color: var(--text-lighter);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .shop-hero p {
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 /* Category Tabs */
@@ -32,17 +49,24 @@
 .tab-btn {
     padding: 10px 20px;
     background: transparent;
-    border: 2px solid var(--rose-gold);
-    color: var(--rose-gold);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
     border-radius: 30px;
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .tab-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .tab-btn:hover, .tab-btn.active {
-    background: var(--rose-gold);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 /* Product Grid */
@@ -68,7 +92,11 @@
     cursor: pointer;
     opacity: 0;
     transition: var(--transition);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+}
+
+body.dark-mode .product-card .quick-view {
+    background: rgba(18, 18, 18, 0.9);
 }
 
 .product-card:hover .quick-view {
@@ -89,12 +117,16 @@
 }
 
 .modal-content {
-    background: white;
+    background: var(--bg-color);
     margin: 50px auto;
     max-width: 900px;
     border-radius: 10px;
     overflow: hidden;
     animation: modalFadeIn 0.3s ease;
+}
+
+body.dark-mode .modal-content {
+    background: var(--bg-dark);
 }
 
 @keyframes modalFadeIn {
@@ -108,7 +140,12 @@
     right: 20px;
     font-size: 30px;
     cursor: pointer;
+    color: var(--text-color);
     z-index: 2;
+}
+
+body.dark-mode .close-modal {
+    color: var(--text-light);
 }
 
 .modal-product-view {
@@ -120,7 +157,11 @@
     flex: 1;
     min-width: 300px;
     padding: 30px;
-    background: var(--soft-pink);
+    background: var(--bg-light);
+}
+
+body.dark-mode .modal-product-images {
+    background: var(--bg-dark);
 }
 
 .main-image {
@@ -152,7 +193,7 @@
 }
 
 .thumbnail:hover, .thumbnail.active {
-    border-color: var(--rose-gold);
+    border-color: var(--primary-color);
 }
 
 .thumbnail img {
@@ -170,30 +211,49 @@
 .modal-product-info h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: var(--jet-black);
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+body.dark-mode .modal-product-info h2 {
+    color: var(--text-light);
 }
 
 .modal-product-info .price {
     font-size: 1.5rem;
-    color: var(--rose-gold);
+    color: var(--primary-color);
     font-weight: 700;
     margin-bottom: 15px;
 }
 
+body.dark-mode .modal-product-info .price {
+    color: var(--primary-color);
+}
+
 .product-rating {
     margin-bottom: 20px;
-    color: #ffc107;
+    color: var(--accent-color);
 }
 
 .product-rating span {
-    color: var(--jet-black);
+    color: var(--text-light);
     font-size: 0.9rem;
     margin-left: 10px;
+}
+
+body.dark-mode .product-rating span {
+    color: var(--text-lighter);
 }
 
 .product-description {
     margin-bottom: 25px;
     line-height: 1.7;
+    color: var(--text-light);
+}
+
+body.dark-mode .product-description {
+    color: var(--text-lighter);
 }
 
 .product-options {
@@ -204,6 +264,11 @@
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
+    color: var(--text-color);
+}
+
+body.dark-mode .option-title {
+    color: var(--text-light);
 }
 
 .color-options {
@@ -222,7 +287,7 @@
 }
 
 .color-option:hover, .color-option.selected {
-    border-color: var(--rose-gold);
+    border-color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -236,14 +301,22 @@
     width: 60px;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     margin: 0 10px;
+    background: var(--bg-light);
+    color: var(--text-color);
+}
+
+body.dark-mode .quantity-selector input {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border-color: var(--border-color);
 }
 
 .qty-btn {
     width: 40px;
     height: 40px;
-    background: var(--soft-pink);
+    background: var(--bg-light);
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
@@ -253,15 +326,91 @@
     justify-content: center;
 }
 
+body.dark-mode .qty-btn {
+    background: var(--bg-dark);
+}
+
 .qty-btn:hover {
-    background: var(--rose-gold);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .add-to-cart-modal {
     width: 100%;
     padding: 15px;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
     font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .add-to-cart-modal {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.add-to-cart-modal:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+}
+
+/* Floating Action Buttons for WhatsApp and Phone */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.whatsapp {
+    background-color: #25d366; /* WhatsApp green */
+    color: var(--bg-color);
+}
+
+body.dark-mode .whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #20b158;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.phone {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+body.dark-mode .phone {
+    background-color: var(--secondary-color);
+}
+
+.phone:hover {
+    background-color: #005b8a;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
 }
 
 /* Responsive */
@@ -269,12 +418,48 @@
     .modal-product-view {
         flex-direction: column;
     }
-    
+
     .main-image {
         height: 300px;
     }
-    
+
     .modal-product-info {
         padding: 25px;
+    }
+
+    .shop-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .shop-hero h1 {
+        font-size: 2rem;
+    }
+
+    .shop-hero p {
+        font-size: 1rem;
+    }
+
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .fab {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

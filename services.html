@@ -13,8 +13,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Glam-by Suzii Home">
                 <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
+                <span class="logo-text">Glam-by Suzii</span>
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -25,7 +26,10 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="testimonials.html">Testimonials</a>
                 <a href="contact.html">Contact</a>
-                <a href="#" class="cart-icon">🛒 <span class="cart-count">0</span></a>
+                <a href="#" class="cart-icon" aria-label="Shopping Cart">🛒 <span class="cart-count">0</span></a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
             <div class="mobile-menu-btn">☰</div>
         </div>
@@ -145,6 +149,16 @@
         </div>
     </div>
 
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="https://wa.me/254740579741" class="fab whatsapp" target="_blank" aria-label="Contact via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+254740579741" class="fab phone" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
     <!-- Testimonial Preview -->
     <section class="service-testimonials">
         <div class="container">
@@ -160,8 +174,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
-                    <h3>Glam-by Suzii</h3>
+                    <a href="index.html" class="logo" aria-label="Glam-by Suzii Home">
+                        <img src="logo.png" alt="Glam-by Suzii Logo" class="footer-logo">
+                        <span class="logo-text">Glam-by Suzii</span>
+                    </a>
                     <p>Helping you discover and enhance your natural beauty through premium products and personalized services.</p>
                 </div>
                 <div class="footer-section">
@@ -183,13 +199,13 @@
                     </div>
                     <p>Subscribe to our newsletter for exclusive offers</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your email">
+                        <input type="email" placeholder="Your email" aria-label="Newsletter Email">
                         <button type="submit" class="btn">Subscribe</button>
                     </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Glam-by Suzii. All rights reserved.</p>
+                <p>© 2025 Glam-by Suzii. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,4 +1,3 @@
-```javascript
 // Services Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize booking modal
@@ -76,6 +75,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Theme Toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    });
+
+    // Call Us Now Button
+    const callButton = document.querySelector('.call-now-btn');
+    if (callButton) {
+        callButton.addEventListener('click', () => {
+            window.location.href = 'tel:+1234567890'; // Replace with actual phone number
+        });
+    }
+
+    // WhatsApp Button
+    const whatsappButton = document.querySelector('.whatsapp-btn');
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', () => {
+            window.open('https://wa.me/1234567890?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20services', '_blank'); // Replace with actual WhatsApp number
+        });
+    }
+    
     // Initialize testimonial slider if on page
     if (document.querySelector('.testimonial-slider')) {
         initTestimonialSlider();
@@ -151,4 +190,3 @@ function initTestimonialSlider() {
         }, 5000);
     }
 }
-```
